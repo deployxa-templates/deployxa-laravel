@@ -2,6 +2,35 @@
 
 Production-ready Laravel template optimized for AI-assisted development and Deployxa Cloud.
 
+## 🚀 Deploy in Seconds
+
+Deploy this production-ready template directly to Deployxa Cloud.
+
+[![Deploy with Deployxa](branding/deploy-button.svg)](https://deployxa.com/new?template=laravel&framework=laravel&repo=https://github.com/deployxa-templates/deployxa-laravel&branch=main&source=github&campaign=official-template)
+
+### Or deploy using the CLI
+
+Initialize connection:
+```bash
+deployxa login
+```
+
+Deploy the application:
+```bash
+deployxa deploy
+```
+
+If the repository is already linked:
+```bash
+deployxa deploy
+```
+
+If not linked yet:
+```bash
+deployxa link
+deployxa deploy
+```
+
 ---
 
 ## Why This Template?
@@ -35,19 +64,18 @@ Compatible with major AI tools:
 
 ## Included
 
-* **Dockerfile**: Advanced multi-stage FrankenPHP container.
-* **docker-compose.yml**: Configured with Laravel web application.
-* **Health Checks**: Root health check `/health` returning `{"status":"ok"}`.
-* **Logging**: Production-grade stack logging config.
-* **Security**: Non-root container permissions, security-hardened Alpine build.
-* **CI Actions**: Preconfigured pipeline checking syntax, running tests, and validating Docker.
+* **Dockerfile**: Advanced production multi-stage container configuration.
+* **docker-compose.yml**: Configured local orchestration stack.
+* **Health Checks**: Endpoint `/health` returning `{"status":"ok"}`.
+* **Logging**: Production-grade logging defaults.
+* **Security**: Non-root user permissions, hardened base image.
+* **CI Actions**: Automated pipeline for building, linting, testing, and Docker validation.
 
 ---
 
 ## Requirements
 
 - PHP 8.2+
-- Composer 2+
 - Docker & Docker Compose (optional for containerized run)
 
 ---
@@ -58,24 +86,13 @@ Clone the template and set up configurations:
 
 ```bash
 cp .env.example .env
-composer install
 ```
 
 ---
 
 ## Local Development
 
-Start the local server:
-
-```bash
-php artisan serve
-```
-
----
-
-## Docker
-
-Run the entire application environment with Docker Compose:
+Start the development server:
 
 ```bash
 docker compose up --build
@@ -83,28 +100,15 @@ docker compose up --build
 
 ---
 
-## Deploy to Deployxa
+## Resources & Links
 
-Deploy instantly via CLI:
-
-```bash
-deployxa deploy
-```
-
-For more documentation, visit the [Deployxa Documentation](https://docs.deployxa.com).
-
----
-
-## Environment Variables
-
-| Variable | Description | Default |
-|---|---|---|
-| `APP_NAME` | Name of the application | `Laravel` |
-| `APP_ENV` | Mode of the application (local/production) | `production` |
-| `APP_KEY` | Laravel App encryption key | `base64:...` |
-| `APP_DEBUG` | Enable/Disable debug mode | `false` |
-| `APP_URL` | Application root web URL | `http://localhost` |
-| `LOG_LEVEL` | Level of logging output (debug/info/error) | `info` |
+* [Deployxa Website](https://deployxa.com)
+* [Deployxa Documentation](https://docs.deployxa.com)
+* [Deployxa CLI Repository](https://github.com/deployxa-project/deployxa-cli)
+* [Deployxa Dashboard](https://dash.deployxa.com)
+* [Deployxa Templates Catalog](https://deployxa.com/templates)
+* [Deployxa Community Discord](https://discord.gg/deployxa)
+* [Deployxa Templates GitHub Organization](https://github.com/deployxa-templates)
 
 ---
 
@@ -114,15 +118,19 @@ For more documentation, visit the [Deployxa Documentation](https://docs.deployxa
 .github/
     workflows/
         ci.yml      # CI/CD Validation
+branding/
+    deploy-button.svg       # Deploy Button
+    deploy-button-dark.svg  # Dark Deploy Button
+    deploy-button-light.svg # Light Deploy Button
 docker/             # Configuration files
-app/                # Core Application logic
-public/             # Entrypoint and Static Assets
+src/                # Source files
+public/             # Static Assets
 config/             # Configuration Settings
 scripts/            # Operations Utilities
 docs/               # Architectural Guides
 tests/              # Automation Checks
 .env.example        # Environment Template
-Dockerfile          # FrankenPHP Container
+Dockerfile          # Multi-stage Container
 docker-compose.yml  # Multi-container Setup
 ```
 
@@ -142,9 +150,9 @@ Exposes a JSON payload at `/health`:
 
 ## Production Optimizations
 
-- **FrankenPHP Runner**: Built on Caddy, delivering faster throughput than traditional PHP-FPM / Nginx architectures.
-- **Caching**: Multi-stage dependency building uses docker caching mechanisms.
-- **Docker Base**: Uses lightweight alpine image.
+- **Container Caching**: Docker layer caching speeds up dependency installation.
+- **Minimal Image**: Leverages Alpine or Distroless bases where possible.
+- **Secure Container Configuration**: Executes as non-root user.
 
 ---
 
@@ -159,13 +167,7 @@ Optimized specifically for agents:
 
 ## CI/CD
 
-Validates code syntax, running tests, and constructs docker build cache on pull requests.
-
----
-
-## Troubleshooting
-
-- **Permissions**: Ensure storage and bootstrap/cache folders are writable.
+Validates syntax compiling, execution check, testing logic, and constructs docker build cache on pull requests.
 
 ---
 
