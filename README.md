@@ -6,7 +6,7 @@ Production-ready Laravel template optimized for AI-assisted development and Depl
 
 Deploy this production-ready template directly to Deployxa Cloud.
 
-[![Deploy with Deployxa](branding/deploy-button.svg)](https://deployxa.com/new?template=laravel&framework=laravel&repo=https://github.com/deployxa-templates/deployxa-laravel&branch=main&source=github&campaign=official-template)
+[![Deploy with Deployxa](branding/deploy-button.svg)](https://deployxa.com/dashboard/new?repo=https%3A%2F%2Fgithub.com%2Fdeployxa-templates%2Fdeployxa-laravel&template=laravel&framework=laravel&branch=main&name=deployxa-laravel&runtime=PHP+8.2&package_manager=composer&build_command=composer+install+--no-dev+--optimize-autoloader&start_command=php+artisan+serve+--host+0.0.0.0+--port+8000&dockerfile=Dockerfile&version=1.0.0&build_time=120s&image_size=1.03GB&env_vars=APP_ENV%2CAPP_KEY%2CDB_CONNECTION%2CDB_HOST%2CDB_PORT%2CDB_DATABASE%2CDB_USERNAME%2CDB_PASSWORD)
 
 ### Or deploy using the CLI
 
@@ -66,9 +66,9 @@ Compatible with major AI tools:
 
 * **Dockerfile**: Advanced production multi-stage container configuration.
 * **docker-compose.yml**: Configured local orchestration stack.
-* **Health Checks**: Endpoint `/health` returning `{"status":"ok"}`.
+* **Health Checks**: Endpoint `/health` returning {"status":"ok"}.
 * **Logging**: Production-grade logging defaults.
-* **Security**: Non-root user permissions, hardened base image.
+* **Security**: Hardened base image, run as non-root user.
 * **CI Actions**: Automated pipeline for building, linting, testing, and Docker validation.
 
 ---
