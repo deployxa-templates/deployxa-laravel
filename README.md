@@ -6,7 +6,7 @@ Production-ready Laravel template optimized for AI-assisted development and Depl
 
 Deploy this production-ready template directly to Deployxa Cloud.
 
-[![Deploy with Deployxa](branding/deploy-button.svg)](https://deployxa.com/dashboard/new?repo=https%3A%2F%2Fgithub.com%2Fdeployxa-templates%2Fdeployxa-laravel&template=laravel&framework=laravel&branch=main&name=deployxa-laravel&runtime=PHP+8.2&package_manager=composer&build_command=composer+install+--no-dev+--optimize-autoloader&start_command=php+artisan+serve+--host+0.0.0.0+--port+8000&dockerfile=Dockerfile&version=1.0.0&build_time=120s&image_size=1.03GB&env_vars=APP_ENV%2CAPP_KEY%2CDB_CONNECTION%2CDB_HOST%2CDB_PORT%2CDB_DATABASE%2CDB_USERNAME%2CDB_PASSWORD)
+[![Deploy with Deployxa](branding/deploy-button.svg)](https://deployxa.com/dashboard/new?repo=https://github.com/deployxa-templates/deployxa-laravel)
 
 ### Or deploy using the CLI
 
